@@ -1,0 +1,6 @@
+@import url('./_active/products__list-item_active.css');
+
+.products__list-item {
+	display: inline-block;
+	position: relative;
+}

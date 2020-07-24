@@ -1,0 +1,4 @@
+.cart__total-amount {
+	font-weight: 700;
+	color: var(--red);
+}

@@ -1,0 +1,8 @@
+.cart__order-button {
+	border: 0px;
+	border-radius: 3px;
+	font-weight: 600;
+	color: white;
+	background-color: var(--red);
+	width: 100%;
+}

@@ -1,0 +1,6 @@
+.cart__button {
+	color: var(--red);
+	background: none;
+	border: none;
+	font-size: 1.5rem;
+}

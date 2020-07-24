@@ -1,0 +1,7 @@
+.button {
+	padding: .5em;
+}
+
+.button:hover {
+	cursor: pointer;
+}

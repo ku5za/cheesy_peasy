@@ -1,0 +1,16 @@
+@import url('./__button/cart__button.css');
+@import url('./__box/cart__box.css');
+@import url('./__box_show/cart__box_show.css');
+@import url('./__box_hide/cart__box_hide.css');
+@import url('./__items-list/cart__items-list.css');
+@import url('./__order-button/cart__order-button.css');
+@import url('./__list-item/cart__list-item.css');
+@import url('./__list-item-name/cart__list-item-name.css');
+@import url('./__list-item-amount/cart__list-item-amount.css');
+@import url('./__total/cart__total.css');
+@import url('./__total-label/cart__total-label.css');
+@import url('./__total-amount/cart__total-amount.css');
+
+.cart {
+	position: relative;
+}

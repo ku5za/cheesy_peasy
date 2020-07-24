@@ -1,0 +1,6 @@
+.product-thumbnail__name-container {
+	position: absolute;
+	width: 250px;
+	display: flex;
+	justify-content: center;
+}

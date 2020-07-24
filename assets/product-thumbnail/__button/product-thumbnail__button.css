@@ -1,0 +1,7 @@
+.product-thumbnail__button {
+	color: white;
+	background: var(--red);
+	border: none;
+	border-radius: 1em;
+	padding: 10px;
+}

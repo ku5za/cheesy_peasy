@@ -1,0 +1,4 @@
+.product-thumbnail_minimalized {
+	filter: grayscale(.75);
+	transform: scale(.75);
+}

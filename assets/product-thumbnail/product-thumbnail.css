@@ -1,0 +1,16 @@
+@import url('./__description/product-thumbnail__description.css');
+@import url('./__footer/product-thumbnail__footer.css');
+@import url('./__name/product-thumbnail__name.css');
+@import url('./__name-container/product-thumbnail__name-container.css');
+@import url('./__image/product-thumbnail__image.css');
+@import url('./__purchase-details/product-thumbnail__purchase-details.css');
+@import url('./__price/product-thumbnail__price.css');
+@import url('./__button/product-thumbnail__button.css');
+@import url('./_minimalized/product-thumbnail_minimalized.css');
+
+.product-thumbnail {
+	overflow: hidden;
+	border-radius: 20px;
+	width: 250px;
+	position: relative;
+}

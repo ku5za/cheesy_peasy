@@ -1,0 +1,17 @@
+.background-illustration_pizza {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	opacity: .25;
+	transform: scale(.75);
+	z-index: -20;
+}
+
+.background-illustration_table {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	opacity: .15;
+	z-index: -30;
+}

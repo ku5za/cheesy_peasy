@@ -1,0 +1,22 @@
+.cart__box {
+	background-color: white;
+	padding: 10px;
+	position: absolute;
+	width: 150px;
+	top: 4rem;
+	left: 50%;
+	transform: translateX(-50%);
+	box-shadow: RGBA(150,150,150,0.5) 0px 0px 20px;
+
+	transition: opacity .2s ease-in-out;
+}
+
+.cart__box::before {
+	content: '';
+	position: absolute;
+	width: 1rem;
+	height: 1rem;
+	background-color: white;
+	left: 50%;
+	transform: translate(-50%, -115%) rotate(45deg);
+}

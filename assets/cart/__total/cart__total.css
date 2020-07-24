@@ -1,0 +1,6 @@
+.cart__total {
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid var(--grey);
+	margin: 5px 0;
+}

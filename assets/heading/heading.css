@@ -1,0 +1,6 @@
+@import url('./_main/heading_main.css');
+
+.heading {
+	font-weight: bold;
+	color: var(--red);
+}

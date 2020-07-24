@@ -1,0 +1,23 @@
+@import url('../anhor/anhor.css');
+@import url('../background-illustration_pizza/background-illustration_pizza.css');
+@import url('../button/button.css');
+@import url('../container/container.css');
+@import url('../cart/cart.css');
+@import url('../heading/heading.css');
+@import url('../header/header.css');
+@import url('../products/products.css');
+@import url('../product-thumbnail/product-thumbnail.css');
+
+:root {
+	--red: #A51B10;
+	--grey: #F2F2F2;
+	--brown: #D9A576;
+	--orange: #F28C0E;
+	--yellow: #F1BB13;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Segoe UI';
+	background-color: var(--grey);
+}

@@ -2,3 +2,7 @@
 	filter: grayscale(.75);
 	transform: scale(.75);
 }
+
+.product-thumbnail_minimalized:hover {
+	cursor: pointer;
+}

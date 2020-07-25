@@ -1,4 +1,4 @@
-class Order {
+export class Order {
 	constructor(itemsList = []) {
 		this.itemsList = itemsList;
 	}

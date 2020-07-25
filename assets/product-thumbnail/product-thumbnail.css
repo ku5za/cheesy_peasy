@@ -6,11 +6,19 @@
 @import url('./__purchase-details/product-thumbnail__purchase-details.css');
 @import url('./__price/product-thumbnail__price.css');
 @import url('./__button/product-thumbnail__button.css');
-@import url('./_minimalized/product-thumbnail_minimalized.css');
 
 .product-thumbnail {
 	overflow: hidden;
 	border-radius: 20px;
 	width: 250px;
 	position: relative;
+	filter: grayscale(.75);
+	transform: scale(.95);
+
+	transition: all .4s ease-in-out;
+}
+
+.product-thumbnail:hover {
+	filter: grayscale(0);
+	transform: scale(1);
 }

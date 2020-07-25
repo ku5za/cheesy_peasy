@@ -1,9 +1,11 @@
-class Component {
+export class Component {
 	/**
 	 * Takes HTMLElement where rendered content will be placed
 	 * @param {HTMLElement} renderHook 
 	 */
 	constructor(renderHook) {
+		if(renderHook == null)
+			return;
 		this.renderHook = renderHook;
 	}
 
@@ -28,5 +30,7 @@ class Component {
 				element.setAttribute(name, value);
 			}
 		}
+
+		return element;
 	}
 }

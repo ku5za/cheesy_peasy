@@ -1,3 +1,5 @@
+@import url('./_empty/cart__list-item_empty.css');
+
 .cart__list-item {
 	display: flex;
 	justify-content: space-between;

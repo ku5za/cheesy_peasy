@@ -22,7 +22,9 @@ export class ProductsList extends Component {
 	add = (product) => {
 		if(product == null)
 			return;
-		new ProductsListItem(this.renderHook, product);
+		this.renderHook.appendChild(
+			this.getNewListItem(product)
+		);
 		this.productsList.push(product);
 	}
 

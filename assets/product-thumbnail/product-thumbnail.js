@@ -2,21 +2,29 @@ import {Component}
 	from '../scripts/component.js';
 
 export class ProductThumbnail extends Component {
-	constructor(renderHook, product) {
+	constructor(renderHook, product, buttonCallbackFn) {
 		super(renderHook);
 		this.product = product;
+		this.buttonCallbackFn = buttonCallbackFn;
 
 		this.render();
 	}
 
 	render = () => {
+		const component = this.getProductThumbnailComponent();
+		this.setButtonOnClickEvent(component);
+
+		this.renderHook.appendChild(component);
+	}
+
+	getProductThumbnailComponent = () => {
 		const {name, price, description, pictureURL} = this.product;
-		const el = this.getComponent(
+		const component = this.getComponent(
 			`div`,
 			`product-thumbnail`
 		);
 		
-		el.innerHTML = `
+		component.innerHTML = `
 			<div class="product-thumbnail__name-container">
 				<h3 class="product-thumbnail__name">
 					${name}
@@ -38,8 +46,13 @@ export class ProductThumbnail extends Component {
 					</button>
 				</div>
 			</div>
-		`
+		`;
 
-		this.renderHook.appendChild(el);
+		return component;
+	}
+
+	setButtonOnClickEvent = (productThumbnailElement) => {
+		const button = productThumbnailElement.querySelector('.product-thumbnail__button');
+		button.addEventListener("click", this.buttonCallbackFn);
 	}
 }

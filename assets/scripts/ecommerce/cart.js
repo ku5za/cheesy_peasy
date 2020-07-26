@@ -11,7 +11,7 @@ export class Cart {
 		let thisProductInCart = this.productsInCart.find(
 			(productInCart) => productInCart.product.id === product.id
 		);
-		if(thisProductInCart){
+		if(thisProductInCart) {
 			thisProductInCart.amount++;
 		}
 		else {

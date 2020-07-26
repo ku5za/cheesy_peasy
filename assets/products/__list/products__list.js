@@ -1,10 +1,20 @@
 import {Component} from '../../scripts/component.js';
 import {ProductThumbnail} from '../../product-thumbnail/product-thumbnail.js';
+import {Ecommerce} from '../../scripts/ecommerce/ecommerce.js';
+import { CartBox } from '../../cart/__box/cart__box.js';
 
 export class ProductsList extends Component {
-	constructor(renderHook, productsList = []) {
+	/**
+	 * 
+	 * @param {HTMLElement} renderHook 
+	 * @param {Ecommerce} ecommerce
+	 * @param {CartBox} cartBox
+	 */
+	constructor(renderHook, ecommerce, cartBox) {
 		super(renderHook);
-		this.productsList = productsList;
+		this.productsList = ecommerce.itemsSet;
+		this.cart = ecommerce.cart;
+		this.cartBox = cartBox;
 
 		this.render();
 	}
@@ -33,7 +43,10 @@ export class ProductsList extends Component {
 			`li`,
 			`products__list-item`
 		);
-		new ProductThumbnail(listItem, product);
+		new ProductThumbnail(listItem, product, () => {
+			this.cart.addProduct(product);
+			this.cartBox.updateView();
+		});
 		return listItem;
 	}
 }

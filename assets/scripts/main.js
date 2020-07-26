@@ -11,8 +11,14 @@ class Main {
 	}
 
 	init() {
+		const cartBoxItem = document.querySelector('.cart__box');
+		const cartBox = new CartBox(cartBoxItem, this.ecommerce.cart);
+
+		const cartButton = document.querySelector('.cart__button');
+		cartButton.addEventListener("click", cartBox.toogleBoxVisibility);
+		
 		const productsListEl = document.querySelector(`.products__list`);
-		this.productsList = new ProductsList(productsListEl, this.ecommerce.itemsSet);
+		this.productsList = new ProductsList(productsListEl, this.ecommerce, cartBox);
 		this.productsList.add(
 			new Product(
 				'Italian Cottage',
@@ -22,11 +28,6 @@ class Main {
 			)
 		);
 
-		const cartBoxItem = document.querySelector('.cart__box');
-		const cartBox = new CartBox(cartBoxItem, this.ecommerce.cart);
-
-		const cartButton = document.querySelector('.cart__button');
-		cartButton.addEventListener("click", cartBox.toogleBoxVisibility);
 	}
 }
 

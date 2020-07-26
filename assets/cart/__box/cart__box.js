@@ -38,10 +38,11 @@ export class CartBox extends Component {
 	}
 
 	updateView = () => {
-		this.cart.productsInCart.map(
+		this.cart.productsInCart.forEach(
 			productInCart => {
-				if(this.hasBeenRendered(productInCart))
+				if(this.hasBeenRendered(productInCart)){
 					this.incrementProductAmount(productInCart);
+				}
 				else {
 					this.renderNewListItem(productInCart);
 				}
@@ -51,20 +52,25 @@ export class CartBox extends Component {
 		)
 	}
 
-	hasBeenRendered(productToRender) {
+	hasBeenRendered(productInCart) {
 		const beenRendered = this.productsToRender.some(
-			product => productToRender.product.id === product.id
+			productToRender =>
+				productToRender.product.id === productInCart.product.id
 		);
 		return beenRendered;
 	}
 
-	incrementProductAmount = (productToRender) => {
-		const listItemAmountEl =
+	incrementProductAmount = (productInCart) => {
+		const productToRender = this.productsToRender.find(
+			productToRender => 
+				productToRender.product.id === productInCart.product.id
+		);
+		const listItemAmountEl = 
 			productToRender
 			.element
 			.querySelector('.cart__list-item-amount');
 		
-		listItemAmountEl.textContent = `x${productToRender.amount}`;
+		listItemAmountEl.textContent = `x${productInCart.amount}`;
 	}
 
 	renderNewListItem = (productInCart) => {
